@@ -1,0 +1,155 @@
+/**
+ * This file is a container for custom CSS. You can use it to override the default styles of the theme.
+ *
+ * 1. Copy the file "SAMPLE.custom.css" and rename it to "custom.css".
+ *    Otherwise this file will not be loded by Magento.
+ * 2. Enable it in the admin panel.
+ * 3. Uncomment slected sample styles or add your own CSS to override the default styles of the theme.
+ *
+ * Please refer to the user guide for more details.
+ *
+ */
+
+
+
+/* Stock indicator on product page: icon color
+-------------------------------------------------------------- */
+
+/*
+.availability-only .ic { color: green; }
+*/
+
+
+
+/* Product counter in the mini cart drop-down
+-------------------------------------------------------------- */
+
+/*
+.header .skip-link .count {
+	background-color: deepskyblue;
+}
+*/
+.home_categories-inner .cat-item img {
+  height: 348px;
+  width: 270px;
+}
+.product-attribute span {
+    color: #888888;
+    font-size: 14px;
+    line-height: 18px;
+}
+.width-data::after,.height-data::after {
+  content: "|";
+}
+.footer.footer-top .item-left{
+    margin-right: 0;
+}
+
+
+/*.brand-slider-wrapper .fade-on-hover > img {
+  height: 60px;
+  width: 175px;
+}*/
+/*Start 25-May-2017*/
+.page-banners .feature.feature-icon-hover.indent > h4 {
+  line-height: 36px;
+  margin-bottom: 0;
+}
+.cms-faq-page .main a,.cms-privacy-policy .main .std a, .cms-page-view .main .std a {
+  font-style: italic;
+  font-weight: bold;
+}
+.cms-page-view.cms-shop .main a{
+  font-style: normal;
+  font-weight: normal;
+}
+.footer-company-info .cell-no,.footer-company-info .mail-info,.faq-info .faq-info-four{
+  line-height: 36px;
+}
+.cms-page-view .main .std ol {
+  margin-left: 15px;
+}
+.cms-page-view .images {
+  display: block;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.cms-page-view li.bullet {
+  list-style: initial;
+}
+.rta-guide h4 {
+  border-bottom: 2px solid #000000;
+  display: inline-block;
+}
+.rta-guide ul {
+  list-style: inside none disc;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+.rta-guide, .directions{
+  font-size: 14px;
+}
+.rta-guide li.grid12-12.no-gutter {
+  clear: both;
+  display: list-item;
+  list-style: outside none decimal;
+  margin-bottom: 20px;
+}
+.cms-page-view .rta-guide .images{
+   margin: 0 auto 15px;
+}
+.footer-top .links > li > a {
+    padding: 0 5px;
+}
+/*.left-part {
+  float: left;
+  width: 60%;
+}
+.cms-page-view .rta-guide .images {
+  float: right;
+  width: 38%;
+}*/
+/*End 25-May-2017*/
+/*Start 30-June-2017*/
+
+.nav-mobile.opt-sb0 .nav-item.nav-item--only-blocks {
+  display: block;
+}
+.nav-mobile .nav-block {
+  display: block;
+}
+.information-submenu-link {
+  padding: 10px 20px;
+}
+.information-submenu-link li {
+  padding: 8px;
+}
+#nav .nav-custom-link .nav-panel-inner {
+  padding: 0;
+}
+.nav-regular .nav-custom-link .nav-panel {
+  width: auto;
+  left: inherit !important;
+}
+#nav .nav-panel--dropdown a {
+  font-family: "Bitter",georgia,serif;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+/*End 30-June-2017*/
+@media only screen and (min-width: 320px) and (max-width: 639px){
+  .cms-page-view  #zoom-btn {
+    display: block;
+  }
+}
+@media only screen and (min-width: 640px) and (max-width: 767px){
+  .cms-page-view  #zoom-btn {
+    display: block;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+
+}
+.feature-wrapper.bottom-border {
+    display: none;
+}

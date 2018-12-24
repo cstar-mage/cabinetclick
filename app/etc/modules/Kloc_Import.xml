@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Kloc_Import>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Kloc_Import>
+    </modules>
+</config> 

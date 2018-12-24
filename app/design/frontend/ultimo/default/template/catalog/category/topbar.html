@@ -1,0 +1,207 @@
+
+<?php
+    $_helper    = $this->helper('catalog/output');
+    $_category  = $this->getCurrentCategory();
+    $_imgHtml   = '';
+    if ($_imgUrl = $_category->getImageUrl()) {
+        $_imgHtml = '<p class="category-image"><img src="'.$_imgUrl.'" alt="'.$this->escapeHtml($_category->getName()).'" title="'.$this->escapeHtml($_category->getName()).'" /></p>';
+        $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
+    }
+?> 
+
+<div class="category-content-area">
+    <div class="category-content-area-inner clearer">
+        <div class="grid12-3 noleftmargin category-image-area">
+            <div class="noleftmargin category-image-area-inner">
+                <?php if($_imgUrl): ?>
+                    <?php echo $_imgHtml ?>
+                <?php endif; ?>
+            </div>
+        </div>
+        <div class="grid12-9">
+            <!--start 2nd column-->
+            <div class="page-title category-title">
+                <?php if($this->IsRssCatalogEnable() && $this->IsTopCategory()): ?>
+                    <a href="<?php echo $this->getRssLink() ?>" class="link-rss"><?php echo $this->__('Subscribe to RSS Feed') ?></a>
+                <?php endif; ?>
+                <h1><?php echo $_helper->categoryAttribute($_category, $_category->getName(), 'name') ?></h1>
+            </div>
+            <div class="maintabs"><!--start tabs-->
+                <div class="cat-tabs-section">
+                    <ul>
+                        <li data-id="tabcontent1" class="tab-label active">FEATURES</li>
+                        <li data-id="tabcontent2" class="tab-label">SPECS</li>
+                        <li data-id="tabcontent3" class="tab-label">ABOUT</li>
+                        <li data-id="tabcontent4" class="tab-label">ASSEMBLY</li>
+                    </ul>
+                </div>
+                <div class="tab-contents">
+                    <div class="tab-content-inner clearer">
+                        <div class="tabcontent1 tab-content active">
+                            <?php if($_description = $this->getCurrentCategory()->getDescription()): ?>
+                                <div class="category-description std">
+                                    <?php echo $_helper->categoryAttribute($_category, $_description, 'description') ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                        <div class="tabcontent2 tab-content">
+                            <table id="product-attribute-specs-table" class="data-table">
+                            <colgroup><col width="30%">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr class="first odd">
+                                    <th class="label">Material</th>
+                                    <td class="data last">Solid Oak</td>
+                                </tr>
+                                        <tr class="even">
+                                    <th class="label">Style</th>
+                                    <td class="data last">Full overlay, Butt door</td>
+                                </tr>
+                                        <tr class="odd">
+                                    <th class="label">Wall &amp; Base</th>
+                                    <td class="data last">Raised Square (5pc Decore header)</td>
+                                </tr>
+                               <tr class="even">
+                                    <th class="label">Front Frame</th>
+                                    <td class="data last">3/4" Solid Wood</td>
+                                </tr>
+                                <tr class=" odd">
+                                    <th class="label">Door Frame</th>
+                                    <td class="data last">3/4" Solid Oak</td>
+                                </tr>
+                                <tr class="even">
+                                    <th class="label">Door Center</th>
+                                    <td class="data last">MDF with Oak Veneer</td>
+                                </tr>
+                                <tr class=" odd">
+                                    <th class="label">Sides (wall &amp; base)</th>
+                                    <td class="data last">1/2" A-Grade plywood with wood veneer</td>
+                                </tr>
+                                <tr class="even">
+                                    <th class="label">Top &amp; Bottom (wall)</th>
+                                    <td class="data last">1/2" A-Grade plywood with wood veneer</td>
+                                </tr>
+                                <tr class=" odd">
+                                    <th class="label">Bottom (base)</th>
+                                    <td class="data last">3/8" A-Grade plywood with wood veneer</td>
+                                </tr>
+                                <tr class="even">
+                                    <th class="label">Cabinet Interior</th>
+                                    <td class="data last">Matches door color</td>
+                                </tr>
+                                <tr class=" odd">
+                                    <th class="label">Back Panel</th>
+                                    <td class="data last">1/2" Picture frame recess style</td>
+                                </tr>
+                                <tr class="even">
+                                    <th class="label">Hinges</th>
+                                    <td class="data last">Concealed 6-way adjustable hinges</td>
+                                </tr>
+                                <tr class=" odd">
+                                    <th class="label">Connectors</th>
+                                    <td class="data last">Pre-installed, color coated metal clip, wont tarnish</td>
+                                </tr>
+                                <tr class="even">
+                                    <th class="label">Shelves</th>
+                                    <td class="data last">3/4" A-Grade plywood with wood veneer</td>
+                                </tr>
+                                <tr class=" odd">
+                                    <th class="label">Drawer Box</th>
+                                    <td class="data last">Solid wood 3/5" sides, Drawer bottom 1/2" plywood, Drawer length 21", Rabbet join construction, Natural Oak Finish</td>
+                                </tr>
+                                <tr class="even">
+                                    <th class="label">Drawer Glides</th>
+                                    <td class="data last">Epoxy coated metal side mount</td>
+                                </tr>
+                                <tr class=" odd">
+                                    <th class="label">Base Corner Support</th>
+                                    <td class="data last">Plastic Corner brackets</td>
+                                </tr>
+                                <tr class=" last even">
+                                    <th class="label">Optional</th>
+                                    <td class="data last">Upgrade dove tail drawer box available, must also upgrade glides to undermount full extension, soft close to fit, AVAILABLE ONLY ON ASSEMBLED ORDERS, Blumotion (Soft closing door)</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tabcontent3 tab-content">
+                            <?php if($_descriptionAbout = $this->getCurrentCategory()->getAbout()): ?>
+                                <div class="category-description std">
+                                    <?php echo $_helper->categoryAttribute($_category, $_descriptionAbout, 'about') ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                        <div class="tabcontent4 tab-content">
+                            <?php if($_descriptionAssembly = $this->getCurrentCategory()->getAssembly()): ?>
+                                <div class="category-description std">
+                                    <?php echo $_helper->categoryAttribute($_category, $_descriptionAssembly, 'assembly') ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+.cat-tabs-section ul li.active {
+  background: #e5e5e5 none repeat scroll 0 0;
+  color: #d91f1f;
+  font-family: "Montserrat",sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.tab-content {
+  max-height: 260px;
+  overflow: auto;
+}
+.maintabs {
+  margin-top: 20px;
+}
+.cat-tabs-section ul li {
+    color: #888;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Montserrat",sans-serif;
+    font-size: 14px;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.cat-tabs-section ul li:hover {
+  color: #d91f1f;
+}
+.tab-content{
+    display: none;
+}
+.tab-content.active{
+    display: block;
+}
+.tab-content{
+  color: #888;
+  font-size: 14px;
+  line-height: 24px;
+}
+</style>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+
+        jQuery('li.tab-label').bind('click', function(event) {
+            
+            var activeId = jQuery(this).attr('data-id');
+
+            jQuery('.cat-tabs-section li').each(function(index, el) {
+                jQuery(this).removeClass('active');
+            });
+            jQuery('.tab-content-inner .tab-content').each(function(index, el) {
+                jQuery(this).removeClass('active');
+            });
+            jQuery(this).addClass('active');
+            jQuery('.'+activeId).addClass('active');
+
+        });
+        
+    });
+</script>

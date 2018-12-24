@@ -1,0 +1,176 @@
+
+<?php if($this->IsTopCategory()): ?>
+<?php
+    $_helper    = $this->helper('catalog/output');
+    $_category  = $this->getCurrentCategory();
+    $_imgHtml   = '';
+    if ($_imgUrl = $_category->getImageUrl()) {
+        $_imgHtml = '<p class="category-image"><img src="'.$_imgUrl.'" alt="'.$this->escapeHtml($_category->getName()).'" title="'.$this->escapeHtml($_category->getName()).'" /></p>';
+        $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
+    }
+    
+    $_categoryAttributes = [
+		'door_material' 		=> 'Door Material',
+		'style' 				=> 'Style',
+		'door_style' 			=> 'Door Style',
+		'face_frame' 			=> 'Face Frame',
+		'door_frame' 			=> 'Door Frame',
+		'door_center' 			=> 'Door Center',
+		'cabinet_sides' 		=> 'Cabinet Sides',
+		'cabinet_top_bottom' 	=> 'Cabinet Top & Bottom',
+		'interior_finish' 		=> 'Interior Finish',
+		'back_panel' 			=> 'Back Panel',
+		'hinges' 				=> 'Hinges',
+		'connectors' 			=> 'Connectors',
+		'shelves' 				=> 'Shelves',
+		'drawer_box' 			=> 'Drawer Box',
+		'drawer_bottom' 		=> 'Drawer Bottom',
+		'drawer_length' 		=> 'Drawer Length',
+		'drawer_box_finish' 	=> 'Drawer Box Finish',
+		'drawer_glides' 		=> 'Drawer Glides',
+		'corner_supports' 		=> 'Corner Supports',
+		
+    ];
+?> 
+
+<div class="category-content-area">
+    <div class="category-content-area-inner clearer">
+        <div class="grid12-5 noleftmargin category-image-area no-left-gutter">
+            <div class="noleftmargin category-image-area-inner">
+                <?php if($_imgUrl): ?>
+                    <?php echo $_imgHtml ?>
+                <?php endif; ?>
+            </div>
+        </div>
+        <div class="grid12-7">
+            <!--start 2nd column-->
+            <div class="page-title category-title"> 
+                <h1><?php echo $_helper->categoryAttribute($_category, $_category->getName(), 'name') ?></h1>
+            </div>
+            <div class="maintabs"><!--start tabs-->
+                <div class="cat-tabs-section">
+                    <ul>
+                        <li data-id="tabcontent1" class="tab-label active">FEATURES</li>
+                        <li data-id="tabcontent2" class="tab-label">SPECS</li>
+                        <li data-id="tabcontent3" class="tab-label">ABOUT</li>
+                        <li data-id="tabcontent4" class="tab-label">ASSEMBLY</li>
+                    </ul>
+                </div>
+                <div class="tab-contents">
+                    <div class="tab-content-inner clearer">
+                        <div class="tabcontent1 tab-content active">
+                            <?php if($_description = $this->getCurrentCategory()->getDescription()): ?>
+                                <div class="category-description std">
+                                    <?php echo $_helper->categoryAttribute($_category, $_description, 'description') ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                        <div class="tabcontent2 tab-content">
+                            <table id="product-attribute-specs-table" class="data-table category-attribute-table">
+                            <colgroup><col width="30%">
+                                <col>
+                            </colgroup>
+                            <tbody>
+								<?php foreach($_categoryAttributes as $_key => $_title): ?>
+									<tr class="">
+										<td class="label"><?php echo $_title; ?></th>
+										<td class="data"><?php echo $_category->getData($_key); ?></td>
+									</tr>
+								<?php endforeach; ?>  
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tabcontent3 tab-content">
+                            <?php if($_descriptionAbout = $this->getCurrentCategory()->getAbout()): ?>
+                                <div class="category-description std">
+                                    <?php echo $_helper->categoryAttribute($_category, $_descriptionAbout, 'about') ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                        <div class="tabcontent4 tab-content">
+                            <?php if($_descriptionAssembly = $this->getCurrentCategory()->getAssembly()): ?>
+                                <div class="category-description std">
+                                    <?php echo $_helper->categoryAttribute($_category, $_descriptionAssembly, 'assembly') ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+.cat-tabs-section ul li.active {
+  background: #e5e5e5 none repeat scroll 0 0;
+  color: #d91f1f;
+  font-family: "Montserrat",sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.tab-content {
+  max-height: 260px;
+  overflow: auto;
+}
+.maintabs {
+  margin: 20px 0;
+    min-height: 320px;
+}
+.cat-tabs-section ul li {
+    color: #888;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Montserrat",sans-serif;
+    font-size: 14px;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.cat-tabs-section ul li:hover {
+  color: #d91f1f;
+}
+.tab-content{
+    display: none;
+}
+.tab-content.active{
+    display: block;
+}
+.tab-content{
+  color: #888;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.category-image-area-inner .category-image img {
+	width:100%;
+	height:350px;
+}
+.category-image-area-inner .category-image {text-align: left;border: 1px solid #eee;
+    padding: 5px;}
+.category-attribute-table tr{ background-color: #e5e5e5;}    
+.category-attribute-table tr:nth-child(2n+1) {
+    background-color: transparent;
+}    
+.category-attribute-table tr td {border-right: 1px solid #f5f5f5;}
+</style>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+
+        jQuery('li.tab-label').bind('click', function(event) {
+            
+            var activeId = jQuery(this).attr('data-id');
+
+            jQuery('.cat-tabs-section li').each(function(index, el) {
+                jQuery(this).removeClass('active');
+            });
+            jQuery('.tab-content-inner .tab-content').each(function(index, el) {
+                jQuery(this).removeClass('active');
+            });
+            jQuery(this).addClass('active');
+            jQuery('.'+activeId).addClass('active');
+
+        });
+        
+    });
+</script>
+<?php endif; ?>

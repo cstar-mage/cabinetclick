@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <import_adminhtml_import_product>
+        <reference name="content">
+            <block type="import/adminhtml_import_product_edit" name="import_product" />
+        </reference>
+    </import_adminhtml_import_product>
+	<import_adminhtml_import_media>
+        <reference name="content">
+            <block type="import/adminhtml_import_media_edit" name="import_product_images" />
+        </reference>
+    </import_adminhtml_import_media>
+    
+    <import_adminhtml_import_relatedproduct>
+        <reference name="content">
+            <block type="import/adminhtml_import_relatedproduct_edit" name="import_relatedproduct" />
+        </reference>
+    </import_adminhtml_import_relatedproduct>
+	
+</layout>

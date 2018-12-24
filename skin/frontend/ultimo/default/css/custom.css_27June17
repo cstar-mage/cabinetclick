@@ -1,0 +1,61 @@
+/**
+ * This file is a container for custom CSS. You can use it to override the default styles of the theme.
+ *
+ * 1. Copy the file "SAMPLE.custom.css" and rename it to "custom.css".
+ *    Otherwise this file will not be loded by Magento.
+ * 2. Enable it in the admin panel.
+ * 3. Uncomment slected sample styles or add your own CSS to override the default styles of the theme.
+ *
+ * Please refer to the user guide for more details.
+ *
+ */
+
+
+
+/* Stock indicator on product page: icon color
+-------------------------------------------------------------- */
+
+/*
+.availability-only .ic { color: green; }
+*/
+
+
+
+/* Product counter in the mini cart drop-down
+-------------------------------------------------------------- */
+
+/*
+.header .skip-link .count {
+	background-color: deepskyblue;
+}
+*/
+.home_categories-inner .cat-item img {
+  height: 348px;
+  width: 270px;
+}
+.product-attribute span {
+    color: #888888;
+    font-size: 14px;
+    line-height: 18px;
+}
+.width-data::after,.height-data::after {
+  content: "|";
+}
+/*.brand-slider-wrapper .fade-on-hover > img {
+  height: 60px;
+  width: 175px;
+}*/
+/*Start 25-May-2017*/
+.page-banners .feature.feature-icon-hover.indent > h4 {
+  line-height: 36px;
+  margin-bottom: 0;
+}
+.cms-faq-page a,.cms-privacy-policy .std a {
+  font-style: italic;
+  font-weight: bold;
+}
+.footer-company-info .cell-no,.footer-company-info .mail-info,.faq-info .faq-info-four{
+  line-height: 36px;
+}
+
+/*End 25-May-2017*/

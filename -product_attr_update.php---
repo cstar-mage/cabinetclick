@@ -1,0 +1,86 @@
+<?php
+	
+	require_once 'app/Mage.php';
+	if (!Mage::isInstalled()) {
+		echo "Application is not installed yet, please complete install wizard first.";
+		exit;
+	}
+	echo "string";die('ddd');
+	Mage::app('admin')->setUseSessionInUrl(false);
+	umask(0);
+	set_time_limit(0);
+	ini_set('memory_limit','2G');
+	ini_set('max_execution_time','18000');
+
+	Mage::setIsDeveloperMode(true);
+	Mage::app();
+    Mage::app()->setCurrentStore(Mage_Core_Model_App::ADMIN_STORE_ID);
+	ini_set('display_errors', 1);
+
+	$websiteIds = Mage::getModel('core/website')->getCollection()
+    ->addFieldToFilter('website_id', array('neq'=>0))
+    ->getAllIds();
+    echo "string";die('ddd');
+	$fileName = 'ecobox.csv';
+	$file = fopen(Mage::getBaseDir().DS.'import'.DS.'importecobox'.DS.$fileName, 'r');
+	
+		
+	$fields = fgetcsv($file);   
+	$count = 0;
+
+	$arrChildCats = array();
+	$arrChildCatsCsv = array();
+
+	
+
+	
+	while (($row = fgetcsv($file)) !== FALSE) {
+
+	echo "<pre>"; print_r($row); die;
+
+		if($row[1]){
+			$categoryId = 0;
+			$catFound = false;
+			/*$children = Mage::getModel('catalog/category')->getCategories($parentId);
+			foreach ($children as $category) {
+				if(strtolower($category->getName()) == strtolower($row[0])) {
+					$categoryId =  $category->getId();
+					$catFound = true;
+					break 1;
+				}
+			}*/
+			$strCSVCatKey = preg_replace('/\s+/', '_', strtolower(trim($row[0])));
+			
+			if(array_key_exists($strCSVCatKey, $arrChildCats)){
+				$catFound = true;
+				$categoryId = $arrChildCats[$strCSVCatKey];
+			}
+				
+				$skuString = explode('(', $row[1]);
+				
+				$sku = 'LEX-'.trim($skuString[0]);
+
+				$product = Mage::getModel('catalog/product')->loadByAttribute('sku',$sku);
+				try{
+
+					    $product->setData('wide', $row[1]);
+						$product->setData('length',$row[2]);
+						$product->setData('depth', $row[3]);
+						$product->setWeight($row[4]);
+
+					$count++;
+					
+					$product->save();
+				
+				}catch(Exception $e){
+					print_r($e);
+				}
+	
+		}				
+	}	
+
+	echo "Total ".$count." Product Imported.";
+
+	
+
+?>

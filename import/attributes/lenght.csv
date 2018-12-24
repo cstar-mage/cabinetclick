@@ -1,0 +1,177 @@
+"SKU","LENGTH"
+"W3012",13
+"W301224","24  3/4"
+"W3612",38
+"W361224",38
+"W3018",19
+"W301824",25
+"W3618",19
+"W361824",25
+"W2424",25
+"W242424",26.5
+"W3024",25
+"W302424",25
+"W3624",25
+"W362424","25  1/2"
+"W930",13
+"W1230","13  1/2"
+"W1530",32
+"W1830","32  1/2"
+"W2130","32  1/2"
+"W2430","32  3/4"
+"W2730",33
+"W3030","32  1/4"
+"W3330",31
+"W3630",31
+"W3930",31
+"W4230",31
+"WR1830 (Wine Rack)",19
+"CDW2430 (Corner Diagonal Wall)",20
+"WBC2430 (Blind Cabinet)",25
+"WBC3030 (Blind Cabinet)",31
+"WBC3630 (Blind Cabinet)",31
+"WC2430 (90 Wall Corner)","22  1/4"
+"W936",38
+"W1236","38  1/2"
+"W1536",38
+"W1836",38
+"W2136",38
+"W2436",38
+"W2736",38
+"W3036",38
+"W3336",38
+"W3636","38  1/2"
+"W3936",37
+"W4236",37
+"WR1836 (Wine Rack)","38  1/2"
+"CDW2436 (Corner Diagonal Wall)","39  1/4"
+"WBC2436 (Blind Cabinet)","38  1/2"
+"WBC3036 (Blind Cabinet)","38  1/2"
+"WBC3636 (Blind Cabinet)","38  1/4"
+"WC2436 (90 Wall Corner)",39
+"W942",44
+"W1242",44
+"W1542",44
+"W1842",44
+"W2142","43  1/2"
+"W2442",44
+"W2742","44  1/4"
+"W3042",44
+"W3342","44  1/2"
+"W3642","44  1/4"
+"W3942",44.5
+"W4242",44
+"CDW2442 (Corner Diagonal Wall)",44
+"WBC2442 (Blind Cabinet)","44  1/2"
+"WBC3042 (Blind Cabinet)","44 1/2"
+"WBC3642 (Blind Cabinet)","44  1/2"
+"WC2442 (90 Wall Corner)",45
+"WMW3018 (Microwave Cabinet)","44  1/2"
+"WES1230 (Wall Open Shelf)","32  1/2"
+"WES1236 (Wall Open Shelf)",30
+"WES1242 (Wall Open Shelf)",44
+"AW1230 (Angle Wall Cabinet)",33
+"AW1236 (Angle Wall Cabinet)",38
+"AW1242 (Angle Wall Cabinet)",44
+"WDD1230 (Wall Decorative Door)",29
+"WDD1236 (Wall Decorative Door)",35
+"WDD1242 (Wall Decorative Door)",41
+"WGD1230",29
+"WGD1830",29
+"WGD2430 (EA)",29
+"WGD3030 (EA)",29
+"WGD3630 (EA)",29
+"WGD1236",35
+"WGD1836",35
+"WGD2436 (EA)",35
+"WGD3036 (EA)",35
+"WGD3636 (EA)",35
+"WGD1242",41
+"WGD1842",41
+"WGD2442 (EA)",41
+"WGD3042 (EA)",41
+"WGD3642 (EA)",41
+"CWGD2430 (EA)",29
+"CWGD2436 (EA)",35
+"CWGD2442 (EA)",41
+"B09 (No drawer)",37
+"B12","36  1/2"
+"B15",36
+"B18",37
+"B21","36  1/4"
+"B24",37
+"B27",36
+"B30",36
+"B33","36  1/2"
+"B36","38  1/2"
+"B39",41
+"B42","43  1/2"
+"DB12","36  1/2"
+"DB15",36
+"DB18",36
+"DB21","36  1/2"
+"DB24","36  1/2"
+"DB30",38
+"DB36","37  1/4"
+"SB27",36
+"SB30",36
+"SB33",36
+"SB36","38  1/2"
+"CSB36 (Corner Sink Base)",37
+"LS36 (Lazy Susan)",37
+"BBC36 (Blind Base)",38
+"BBC42 (Blind Base)",44
+"B30MW (Base Microwave Cabinet)","36  1/2"
+"AB24 (Angle Base)",36
+"BES12 (Base Open Shelf)","36  1/2"
+"BDD24 (Base decorative door)",32
+"VSB24","36  1/2"
+"VSB30","36  1/4"
+"VSB36",38
+"CVSB30R (Combo Vanity Sink Base)","36  1/4"
+"CVSB30L (Combo Vanity Sink Base)","36  1/4"
+"VDB12","35  1/2"
+"VDB15","36  3/4"
+"VDD3021 (Vanity Desk Drawer trimmable to 24)","32  1/4"
+"VOS12 (Vanity Open shelf)",0
+"UC1884 (Tall pantry cabinet)",86
+"UC2484 (Tall pantry cabinet)",86
+"OC3384 (Oven Cabinet)",86
+"UC1890 (Tall pantry cabinet)","92  1/4"
+"UC2490 (Tall panrty cabinet)","94  1/4"
+"OC3390 (Oven Cabinet)",93
+"UC1896 (Tall pantry cabinet)",97
+"UC2496 (Tall pantry cabinet)","97  1/2"
+"OC3396 (Oven Cabinet)","97  1/2"
+"Sample Door",12
+"DWR3 (DW panel)","34  1/2"
+"REP396 (Ref. Panel)",96
+"3/4REP96 (Ref. Panel)",96
+"REP39630 (Ref. Panel)",96
+"BF3","34  1/2"
+"BF6","34  1/2"
+"WF342",42
+"WF642",42
+"TF396 (Tall Filler)",96
+"ROT18 (Roll out tray)",25
+"ROT24 (Roll out tray)",26
+"ROT30 (Roll out tray)",32
+"ROT36 (Roll out tray)",38
+"BTC18 (Base Trash Can)",36
+"BP4896 (Plain back panel)",96
+"DBP4896 (Decorative back panel)",96
+"TK8",96
+"LR8 (Light rail molding)",96
+"VAL48-A (Valance)",48
+"VAL48-B (Valance)",0
+"SM8 (Scribe Molding)",96
+"OCM8 (Outside Corner Molding)",96
+"ICM8 (Inside Corner Molding)",96
+"Shoe Molding",96
+"Base Molding",96
+"CORBEL-A ",6
+"CORBEL-B","9  1/4"
+"LEG-A","34  1/2 "
+"LEG-B","34  1/2 "
+"CM96-A (Crown Molding)",96
+"CM96-B (Crown Molding)",96
